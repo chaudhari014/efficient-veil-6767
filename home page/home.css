@@ -1,0 +1,238 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#topbar{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    color: white;
+    background-color:rgb(101, 56, 139);
+    padding-bottom: 2px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 0px;
+}
+#topbar p{
+    margin-right: 25px;
+}
+#topbar>p:first-child{
+    margin-left: 60px;
+}
+#firstimage{
+    /* box-sizing:content-box; */
+    display: flex;
+    border-bottom: 0.1px solid #E0E0E0;
+    height: 45px;
+}
+#firstimage>div:first-child{
+    margin-left: 60px;
+}
+#firstimage>div:last-child{
+    margin-right: 60px;
+    border-right:none;
+}
+#firstimage div{
+    width: 7%;
+    padding: 10px;
+    padding-bottom: 13px;
+    height: 20px;
+    border-right: 0.1px solid #E0E0E0;
+
+
+}
+#firstimage > div:hover{
+        border-bottom: 2px solid black;
+
+}
+#firstimage>div>img{
+    width: 80%;
+    margin: auto;
+}
+/* search section */
+
+#search{
+    position: sticky;
+    background-color: white;
+    top: 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    line-height: 0px;
+    height: 40px;
+    margin-top: 5px;
+    border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
+}
+.signin>div{
+    width: 15%;
+    margin: auto;
+    
+}
+#search img{
+    width: 100%;
+    height: 100%;
+}
+#search>div:nth-child(1){
+    width: 10%;
+    margin-left: 50px;
+}
+#search>div:nth-child(3){
+    width: 20%;
+    position: relative;
+    right: 40px;
+}
+#search>div:nth-child(2){
+    width: 60%;
+    margin-left: 100px;
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    height: 40px;
+}
+#search>div:nth-child(2)>input{
+    width: 70%;
+    border:1px solid #e8eaec;
+    height: 20px;
+    font-family: LatoMedium,sans-serif;
+    border-radius: 3px 0 0 3px;
+}
+#search>div:nth-child(2)>button{
+    background-color:rgb(101, 56, 139);
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+}
+.signin{
+    font-size: 10px;
+}
+.second{
+    display: flex;
+}
+/* <!-- menubar when cursour going then show menu insight menu --> */
+#menu{
+    position: sticky;
+    background-color: white;
+    top: 40px;
+    display: flex;
+    font-size: 12px;
+    gap: 0px 15px;
+    height: 30px;
+    border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
+    align-items: center;
+}
+#menu>div:nth-child(1){
+    margin-left: 50px;
+}
+
+/* end menu */
+#div1{
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    color: rgba(102, 16, 173, 0.903);
+    font-size: 12px;
+}
+/* middle */
+.outer{
+    text-align: center;
+}
+.middle{
+    display: flex;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    gap: 0px 10px;
+    /* line-height: 10px; */
+    font-size: 13px;
+    font-family: LatoMedium, sans-serif;
+}
+.middle>div>div{
+    padding:5px ;
+
+    /* border: 1px solid red; */
+}
+.middle>div>div:hover{
+   padding: 0px;
+}
+/* .middle>div{
+    width: 20%;
+} */
+/* .middle>div>div{
+    width:100%;
+} */
+
+.middle img{
+    width: 100%;
+}
+#bigimage{
+width: 100%;
+}
+#bigimage>div:first-child{
+    width: 99.99%;
+    height: 250px;
+}
+#bigimage img{
+    width: 100%;
+    height: 100%;
+}
+#bigimagediv{
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    left: 200px;
+}
+#bigimagediv h3{
+    color: #819c6c;
+    line-height: 0px;
+}
+#bigimagediv h3{
+    background-color: transparent;
+}
+.outer2>div{
+ width: 80%;
+ margin: auto;
+}
+.outer2>div> img{
+    width: 100%;
+}
+
+
+/* end part  */
+
+#endpart{
+    display: flex;
+    color: white;
+    background-color:rgba(102, 16, 173, 0.903) ;
+    font-size: 10px;
+    gap: 0px 60px;
+    padding: 20px;
+}
+#endpart>div:first-child{
+    margin-left: 60px;
+}
+.end{
+    display: grid;
+    grid-template-columns:30px 30px 30px;
+    grid-template-rows:repeat(2,40px);
+    gap: 0px 5px;
+}
+.end img{
+    width: 100%;
+}
+#feedback{
+    text-align: center;
+    position: fixed;
+    line-height: 5px;
+    bottom: 40px;
+    right: 1px;
+    font-size: 10px;
+    background-color: white;
+    color:rgba(102, 16, 173, 0.903) ;
+    border: 1px solid rgba(102, 16, 173, 0.903);
+    padding: 5px;
+}
+
+
+
