@@ -96,6 +96,7 @@ body{
     height: 20px;
     font-family: LatoMedium,sans-serif;
     border-radius: 3px 0 0 3px;
+    outline: none;
 }
 #search>div:nth-child(2)>button{
     background-color:rgb(101, 56, 139);
