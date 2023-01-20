@@ -60,6 +60,12 @@
             outline: none;
             
         }
+        #submit{
+            margin-top: 8px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: 0.1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -73,19 +79,68 @@
 
     <div id="rahul">
         <h2>Create New Account</h2>
+        <form >
+
         <p>First Name</p>
-        <input type="text">
+        <input type="text" id="name">
+
         <p>Last Name</p>
-        <input type="text">
+        <input type="text" id="lastname">
+
         <p> Create Email</p>
-        <input type="text">
+        <input type="text" id="email">
+
         <p>create password</p>
-        <input type="password">
+        <input type="password" id="password">
+
         <p>Submit photo link</p>
-        <input type="text">
+        <input type="text" id="link">
         <br>
 
-        <button>Create Account</button>
+        <input type="submit" id="submit">
+    </form>
     </div>
 </body>
+
+<script>
+    let name=document.getElementById("name")
+    let lastname=document.getElementById("lastname")
+    let email=document.getElementById("email")
+    let password=document.getElementById("password")
+    let link=document.getElementById("link")
+    let button=document.querySelector("form")
+    let count=0
+    let createaccount=JSON.parse(localStorage.getItem("data"))||[]
+button.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let formdata={
+        Firstname:name.value,
+        lastname:lastname.value,
+        email:email.value,
+        password:password.value,
+        link:link.value,
+    }
+    
+    
+    for(let key in formdata){
+        count++
+        if(formdata[key]===""){
+            alert(`fill detail :- ${key}`)
+            count=0;
+            break;
+        }
+        
+    }
+    console.log(count)
+    if(count===5){
+        alert("User Account Created Successfully")
+
+    createaccount.push(formdata);
+    localStorage.setItem("data",JSON.stringify(createaccount))
+    location.replace("./login/login page.html")
+    }
+   
+})
+
+</script>
 </html>
