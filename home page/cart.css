@@ -167,18 +167,17 @@ a{
 
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-/* cart item css */
+/* cart  item css */
 #maincontainer{
     display: grid;
     width: 80%;
     margin: auto;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,200px);
     gap: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
     margin-left: 150px;
+    text-align: center;
     font-size: 12px;
     line-height: 10px;
 }
@@ -190,23 +189,27 @@ a{
     padding: 0px 0px 8px 0px;
     border-radius: 0px 0px 8px 8px
 }
-#maincontainer>div>button{
+.incress{
+    border: none;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background-color:#29B6F6;
+    color: white;
+    margin: 5px;
+}
+.remove{
     border: none;
     padding: 5px 10px;
     border-radius: 8px;
-    background-color: red;
+    background-color:red;
     color: white;
-
+    margin-left: 40px;
 }
-#maincontainer>div>button:hover,#maincontainer>div>button:link{
-    background-color: green;
+.remove:hover{
     cursor: pointer;
-    text-decoration:underline;
-    font-size:13px ;
+    font-size: 12px;
 }
-/* a.ex5:visited, a.ex5:link {text-decoration: none;} */
 /*-------------------------------------------------------------- sorting---------------------------------------------------------- */
-
 .sorting{
     position: absolute;
     left: 10px;
@@ -224,7 +227,6 @@ a{
    font-size: 10px;
    margin-bottom: 5px;
    text-decoration: none;
-   
 }
 #filter{
     text-align: center;
@@ -232,7 +234,6 @@ a{
 }
 #filter button{
     font-size: 12px;
-    color: black;
     border: 0.1px solid black;
     background-color: white;
     border-radius: 4px;

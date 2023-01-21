@@ -125,7 +125,7 @@ body{
     align-items: center;
     z-index: 100;
 }
-#menu>div:nth-child(1){
+#menu>a:nth-child(1)>div{
     margin-left: 50px;
 }
 
@@ -237,6 +237,10 @@ width: 100%;
     border: 1px solid rgba(102, 16, 173, 0.903);
     padding: 5px;
 }
+a{
+    text-decoration: none;
+    color: black;
 
+}
 
 
