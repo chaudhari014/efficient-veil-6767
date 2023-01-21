@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./item.css">
+    <link rel="stylesheet" href="./cart.css">
 </head>
 <body>
        <!-- top blue line -->
@@ -45,8 +45,8 @@
         </a>
         </div>
         <div id="input">
-        <input type="text" id="searchinput">
-        <button id="searchbutton">Search</button>
+            <input type="text" id="searchinput">
+            <button id="searchbutton">Search</button>
     </div>
     <div class="second">
         <div class="signin">
@@ -56,7 +56,7 @@
 
         <div class="signin">
             <div> <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7888ec93d3d5c1ec/5e17829300c38f0f022d3646/Header-Icon-PWA-bag.svg?height=25&width=44" alt=""></div>
-           <a href="./cart.html"><p>(<span id="cartvalue">0</span>) Cart</p></a>
+            <a href="./cart.html"><p>(<span id="cartvalue">0</span>) Cart</p></a>
         </div>
     </div>
     </div>
@@ -75,6 +75,7 @@
     <a href="./item.html"><div class="insidemenu">SALE</div></a>
     <a href="#"><div class="insidemenu">COMUNITY</div></a>
 </div>
+
 <!-- filter part -->
 <div id="filter" class="sorting">
     <h4>Select Range</h4>
@@ -90,9 +91,7 @@
     <option value="Valentine">Valentine</option>
     <option value="Plant">Plants</option>
   </select>
-
 <!-------------------------------------------------------------------------- -->
-
 <div id="maincontainer">
     <!-- append here -->
 </div>
@@ -192,25 +191,21 @@ for(let i=0;i<1;i++){
 </script>
 </html>
 <script>
-    let object=[{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191167xltoppicksnipex.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:500 ,name:"Floral Embrace™" ,special:"Birthday",id:1,},{img:"https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191173xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:2500 ,name:"Birthday Strawberries™" ,special:"Birthday",id:2,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/176776mpfv1ck16x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:900 ,name:"Conversation Roses ™ Happy Birthday" ,special:"Birthday",id:3,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/100551mv24b1bl19ck16x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:2000 ,name:"Happy Birthday Assorted Roses, 12-24 Stems" ,special:"Birthday",id:4},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192458hbx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:1500 ,name:"Party Pooch™" ,special:"Birthday",id:5,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/148666lbx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:800 ,name:"Lovely Lavender Medley™" ,special:"Birthday" ,id:6,},
-    {img:"https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/160019mrdv5kp7ch28x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:1500 ,name:"Sweetheart Romance™ Bouquet" ,special:"Valentine" ,id:7,},{img:"https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/191238xlx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:1800 ,name:"Red Rose & Calla Lily Bouquet for Valentine's Day" ,special:"Valentine" ,id:8,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/146002slv1b2cn7x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:1900 ,name:"Deluxe Enchanted Rose Medley Bouquet" ,special:"Valentine" ,id:9,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/192246mrdsv1n5ch31x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:2300 ,name:"Precious Love Medley Bouquet" ,special:"Valentine" ,id:10,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/159139srdv4n5ch31x.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:2100 ,name:"Key to My Heart®" ,special:"Valentine" ,id:11,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/191241lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:2800 ,name:"Dazzle Her Day™ Red Roses" ,special:"Valentine" ,id:12,},
-    {img:"https://cdn1.1800flowers.com/wcsstore/Flowers/images/catalog/1822mfx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:3700 ,name:"Money Tree" ,special:"Plant" ,id:13,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/191199lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:3200 ,name:"Cactus Dish Garden" ,special:"Plant" ,id:14,},{img:"https://cdn2.1800flowers.com/wcsstore/Flowers/images/catalog/1830lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:5000 ,name:"Calming Peace Lily Plant" ,special:"Plant"  ,id:15,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/18201lwx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:3800 ,name:"Azalea Bonsai" ,special:"Plant"  ,id:16,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/101199lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:3500 ,name:"Juniper Bonsai" ,special:"Plant"  ,id:17,},{img:"https://cdn3.1800flowers.com/wcsstore/Flowers/images/catalog/158077lx.jpg?height=456&width=418&sharpen=a0.5,r1,t1&quality=80&auto=webp&optimize={medium}" ,price:4000 ,name:"Money Tree" ,special:"Plant",id:18,}]
+    // caart script///////
+    let maincontainer=document.getElementById("maincontainer")
+    let cartdata=JSON.parse(localStorage.getItem("cart"))||[]
 
- console.log(object)
-  
-  let maincontainer=document.getElementById("maincontainer")
-  let cartdata=JSON.parse(localStorage.getItem("cart"))||[]
-
+    
 //   --------------------------------------------filter---------------------------------------------------//
 let filtervalue=document.getElementById("sort")
 filtervalue.addEventListener("change",()=>{
-    display(filtered(object))
+    display(filtered(cartdata))
 
 })
 
 function filtered(data){
     if(filtervalue.value===""){
-        return (object)
+        return (data)
     }else{
     let filterdata=data.filter((el)=>{
        return filtervalue.value===el.special
@@ -226,42 +221,24 @@ let lower=document.getElementById("lower")
      let filterbutton=document.getElementById("filter-btn")
 
      filterbutton.addEventListener("click",()=>{
-        filterbyprice(object)
+        display(filterbyprice());
      })
 
      function filterbyprice(){
-      let filterprice=filtered(object).filter((el)=>{
+      let filterprice=filtered(cartdata).filter((el)=>{
         if(lower.value<=el.price && upper.value>=el.price ){
           return true
         }else{
           false
         }
       }) 
-      display(filterprice) 
+      return (filterprice) 
      }
 // ----------------------------------------------finish sort by price-------------------------------------------------//////
 
-////////// --------------------------------------------search part---------------------------------------------------------------////////////
-let searchbutton=document.getElementById("searchbutton");
-let searchinput=document.getElementById("searchinput");
-searchbutton.addEventListener("click",()=>{
-    searchfunction(cartdata)
-})
-function searchfunction(data){
-let newfilter=data.filter((el)=>{
-      if((el.name.toUpperCase().includes(searchinput.value.toUpperCase()))===true){
-        return true
-      }else{
-        return false
-      }
-  })
-  display(newfilter)
-}
-
-// -----------------------------------------------------end serch part--------------------------------------------------------///////////////
-  display(object);
-function display(data){
-    // cartvalue//////////////////////////////////////////////////
+    display(cartdata)
+    function display(data){
+    // cartvalue/
     let cartvalue=document.getElementById("cartvalue")
       maincontainer.innerHTML="";
       data.forEach((el)=>{
@@ -279,37 +256,59 @@ function display(data){
         let p2=document.createElement("p");
         p2.innerText=el.special;
 
-        let button=document.createElement("button");
-        button.innerText="Add Cart"
+        let spanEl=document.createElement("span");
+        spanEl.innerText=(el.quintity)
 
-        button.addEventListener("click",()=>{
-                if(dublicat(el)){
-                    alert("Item Already in Bascket")
-                }else{
-                    alert("Item Add to Cart")
-                    cartdata.push({...el,quintity:1})
-                    localStorage.setItem("cart",JSON.stringify(cartdata))
-                    
-                }
-                display(object)
+        let incress=document.createElement("button");
+        incress.className="incress"
+        incress.innerText="+"
+        incress.addEventListener("click",()=>{
+               el=(el.quintity)++
+               localStorage.setItem("cart",JSON.stringify(cartdata));
+               display(cartdata)
         })
 
-        insidediv.append(image,h3,p1,p2,button);
+        
+
+        let decress=document.createElement("button");
+        decress.className="incress"
+        decress.innerText="-"
+        decress.addEventListener("click",()=>{
+          if(el.quintity>1){
+               el=(el.quintity)--
+               localStorage.setItem("cart",JSON.stringify(cartdata));
+               display(cartdata)
+          }
+        })
+
+        let button=document.createElement("button");
+        button.className="remove"
+        button.innerText="Remove"
+
+        button.addEventListener("click",()=>{
+           cartdata=cartdata.filter((e)=>{
+            return e.id!==el.id
+          })
+          
+          localStorage.setItem("cart",JSON.stringify(cartdata));
+          display(cartdata)
+
+        })
+
+        insidediv.append(image,h3,p1,p2,incress,spanEl,decress,button);
         maincontainer.append(insidediv);
       })
       cartvalue.innerText=cartdata.length
       
 }
 
+function subtotal(){
+      let x=0
+      for(let i=0;i<cartdata.length;i++){
+         x+=(cartdata[i].quintity)*(cartdata[i].price)
+      }
+      return x
+     }
 
-////////////// dublicate function////////////////
-function dublicat(el){
-    for(let i=0;i<cartdata.length;i++){
-        if(cartdata[i].id===el.id){
-            return true
-        }
-    }
-    return false
-}
 
 </script>
