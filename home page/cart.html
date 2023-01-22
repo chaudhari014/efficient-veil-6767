@@ -49,10 +49,17 @@
             <button id="searchbutton">Search</button>
     </div>
     <div class="second">
-        <div class="signin">
-            <div> <a href="./login/login page.html" target="_blank" id="signlink" > <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt88337dc20d1d8278/5e178293942caf0fc36b77ab/Header-Icon-PWA-profile.svg" id="signinimage" alt=""></div>
-           <p id="signin"> Sign in</p></a>
-        </div>
+      <div class="signin">
+        <div>  <img  onclick="Rahul()" src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt88337dc20d1d8278/5e178293942caf0fc36b77ab/Header-Icon-PWA-profile.svg" id="signinimage" alt=""></div>
+        <a href="./login/login page.html" id="signlink" ><p id="signin"  > Sign in</p></a>
+        
+    </div>
+    <div id="rahul" class="rahul">
+        <p>Profile</p>
+        <p>My Order</p>
+        <p>My Cart</p>
+        <p onclick="removedata()" class="removed">Log Out</p>
+    </div>
 
         <div class="signin">
             <div> <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7888ec93d3d5c1ec/5e17829300c38f0f022d3646/Header-Icon-PWA-bag.svg?height=25&width=44" alt=""></div>
@@ -95,6 +102,7 @@
 <div id="maincontainer">
     <!-- append here -->
 </div>
+
 <div id="endpart">
     <div>
       <h3>MORE WAYS TO SHOP</h3>
@@ -166,26 +174,56 @@
     </div>
     </div>
 </div>
+
+<div class="carttotal">
+  
+  <h5> Your Total Cart Value :- <span id="spanvalue">0</span></h5>
+  <button type="submit" onclick="openpopup()">Pay </button>
+
+</div>
+
+<div class="popup" id="popup">
+  <img src="https://cdn.pixabay.com/photo/2015/06/09/16/12/icon-803718__340.png" alt="">
+  <h2>Thank You!</h2>
+  <p>Your payment has been Successfully</p>
+  <button id="canclebutton" onclick="closepopup()">Ok</button>
+</div>
     
 </body>
+
+
+
+
+
 <script>
     // ////////////////login dta/////////////////////////////
-    let logindata3=JSON.parse(localStorage.getItem("login"))
-let data=JSON.parse(localStorage.getItem("data"))
+    let logindata3=JSON.parse(localStorage.getItem("login"))||[]
+let data=JSON.parse(localStorage.getItem("data"))||[]
 let signin=document.getElementById("signin")
 let signinimage=document.getElementById("signinimage")
 let signlink=document.getElementById("signlink")
 console.log(signlink)
+let x=document.getElementById("rahul");
 
+ let remove=document.getElementsByClassName("removed");
+ function removedata(){
+    alert("logout successfully")
+    localStorage.removeItem("login")
+    location.reload();
+ }
+if(logindata3.length>0){
 for(let i=0;i<1;i++){
     for(let j=0;j<data.length;j++){
         if(logindata3[logindata3.length-1].email===data[j].email && logindata3[logindata3.length-1].password===data[j].password){
             signinimage.src=data[j].link;
             signin.innerText=data[j].Firstname+" "+data[j].lastname
-            signlink.href="./homepage.html"
-            
+            signlink.href="#"
+            function Rahul(){
+                x.classList.toggle("rahul-change")
+             }
         }
     }
+}
 }
 /////////////////////////////////////////////////////////////////
 </script>
@@ -194,6 +232,25 @@ for(let i=0;i<1;i++){
     // caart script///////
     let maincontainer=document.getElementById("maincontainer")
     let cartdata=JSON.parse(localStorage.getItem("cart"))||[]
+
+    // <!-- ---------------------------------------------------------------pop up script------------------------------------- -->
+
+let popup=document.getElementById("popup");
+// let body=document.querySelector("body")
+function openpopup(){
+   
+   popup.classList.add("open-popup")
+}
+function closepopup(){
+  popup.classList.remove("open-popup");
+  location.replace("./item.html")
+  
+
+  
+}
+
+// ------------------------------------------------------pop  up end--------------------------------------------------------""
+
 
     
 //   --------------------------------------------filter---------------------------------------------------//
@@ -236,10 +293,13 @@ let lower=document.getElementById("lower")
      }
 // ----------------------------------------------finish sort by price-------------------------------------------------//////
 
+
     display(cartdata)
     function display(data){
     // cartvalue/
     let cartvalue=document.getElementById("cartvalue")
+    let spanvalue=document.getElementById("spanvalue")
+    console.log(spanvalue.innerText)
       maincontainer.innerHTML="";
       data.forEach((el)=>{
         let insidediv=document.createElement("div")
@@ -299,8 +359,16 @@ let lower=document.getElementById("lower")
         maincontainer.append(insidediv);
       })
       cartvalue.innerText=cartdata.length
-      
+     spanvalue.innerText=spanvalued(cartdata);
 }
+function spanvalued(data){
+  let y=0
+  for(let i=0;i<data.length;i++){
+    y+=(data[i].quintity)*(data[i].price)
+  }
+  return y
+}
+
 
 function subtotal(){
       let x=0

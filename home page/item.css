@@ -46,8 +46,9 @@ body{
 
 }
 #firstimage>div>img{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    height: 100%;
 }
 /* search section */
 
@@ -112,6 +113,26 @@ body{
 .second{
     display: flex;
 }
+.rahul{
+    width: 60px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 2px;
+    background-color:white;
+    line-height: 5px;
+    left: 10px;
+    border: 0.1px solid rgb(101, 56, 139);
+
+top: 30px;
+    visibility: hidden;
+}
+.rahul-change{
+    visibility: visible;
+}
+.rahul p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* <!-- menubar when cursour going then show menu insight menu --> */
 #menu{
     /* position: sticky; */
@@ -119,14 +140,18 @@ body{
     top: 40px;
     display: flex;
     font-size: 12px;
-    gap: 0px 15px;
+    gap: 0px 5px;
     height: 30px;
     border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
     align-items: center;
+    justify-content: space-around;
     z-index: 100;
 }
 #menu>a:nth-child(1)>div{
     margin-left: 50px;
+}
+#menu>a:last-child>div{
+    margin-right: 40px;
 }
 #feedback{
     text-align: center;
@@ -176,7 +201,7 @@ a{
     grid-template-columns: repeat(3,1fr);
     gap: 15px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 200px;
     text-align: center;
     margin-left: 150px;
     font-size: 12px;
@@ -232,7 +257,6 @@ a{
 }
 #filter button{
     font-size: 12px;
-    color: black;
     border: 0.1px solid black;
     background-color: white;
     border-radius: 4px;
