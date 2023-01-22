@@ -6,6 +6,7 @@ let signlink=document.getElementById("signlink")
 console.log(signlink)
 let x=document.getElementById("rahul");
  let remove=document.getElementsByClassName("removed");
+ let cartvalue=document.getElementById("cartvalue")
 
  function removedata(){
     alert("logout successfully")
@@ -20,6 +21,7 @@ for(let i=0;i<1;i++){
             signinimage.src=data[j].link;
             signin.innerText=data[j].Firstname+" "+data[j].lastname
             signlink.href="#"
+            cartvalue.innerText=data[j].data.length
             function Rahul(){
                 x.classList.toggle("rahul-change");
              }

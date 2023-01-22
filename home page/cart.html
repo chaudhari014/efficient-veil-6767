@@ -190,14 +190,14 @@
 </div>
     
 </body>
-
-
-
-
-
+</html>
 <script>
-    // ////////////////login dta/////////////////////////////
-    let logindata3=JSON.parse(localStorage.getItem("login"))||[]
+    // caart script///////
+    let maincontainer=document.getElementById("maincontainer")
+    let cartdata=JSON.parse(localStorage.getItem("cart"))||[]
+
+        // ////////////////login dta/////////////////////////////
+        let logindata3=JSON.parse(localStorage.getItem("login"))||[]
 let data=JSON.parse(localStorage.getItem("data"))||[]
 let signin=document.getElementById("signin")
 let signinimage=document.getElementById("signinimage")
@@ -218,6 +218,13 @@ for(let i=0;i<1;i++){
             signinimage.src=data[j].link;
             signin.innerText=data[j].Firstname+" "+data[j].lastname
             signlink.href="#"
+            // ----------------------add new----------------------------
+            data[j].data=JSON.parse(localStorage.getItem("cart"))||[];
+            localStorage.setItem("data",JSON.stringify(data))
+            
+            let a=data[j].data
+            display(a)
+            // -----------------------------------------------------------
             function Rahul(){
                 x.classList.toggle("rahul-change")
              }
@@ -226,12 +233,6 @@ for(let i=0;i<1;i++){
 }
 }
 /////////////////////////////////////////////////////////////////
-</script>
-</html>
-<script>
-    // caart script///////
-    let maincontainer=document.getElementById("maincontainer")
-    let cartdata=JSON.parse(localStorage.getItem("cart"))||[]
 
     // <!-- ---------------------------------------------------------------pop up script------------------------------------- -->
 
@@ -244,7 +245,6 @@ function openpopup(){
 function closepopup(){
   popup.classList.remove("open-popup");
   location.replace("./item.html")
-  
 
   
 }
@@ -294,7 +294,7 @@ let lower=document.getElementById("lower")
 // ----------------------------------------------finish sort by price-------------------------------------------------//////
 
 
-    display(cartdata)
+    // display(cartdata)
     function display(data){
     // cartvalue/
     let cartvalue=document.getElementById("cartvalue")

@@ -198,6 +198,10 @@ for(let i=0;i<1;i++){
         if(logindata3[logindata3.length-1].email===data[j].email && logindata3[logindata3.length-1].password===data[j].password){
             signinimage.src=data[j].link;
             signin.innerText=data[j].Firstname+" "+data[j].lastname
+            // --------------new add-----------------------------------------------
+            data[j].data=JSON.parse(localStorage.getItem("cart"))||[];
+            localStorage.setItem("data",JSON.stringify(data))
+            // -----------------------------------------------------------------------////
             signlink.href="#"
             function Rahul(){
                 x.classList.toggle("rahul-change")
