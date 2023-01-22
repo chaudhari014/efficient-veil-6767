@@ -46,8 +46,9 @@ body{
 
 }
 #firstimage>div>img{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    height: 100%;
 }
 /* search section */
 
@@ -112,6 +113,26 @@ body{
 .second{
     display: flex;
 }
+.rahul{
+    width: 60px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 2px;
+    background-color:white;
+    line-height: 5px;
+    left: 10px;
+    border: 0.1px solid rgb(101, 56, 139);
+top: 30px;
+    visibility: hidden;
+    z-index: 100;
+}
+.rahul-change{
+    visibility: visible;
+}
+.rahul p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* <!-- menubar when cursour going then show menu insight menu --> */
 #menu{
     /* position: sticky; */
@@ -123,10 +144,14 @@ body{
     height: 30px;
     border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
     align-items: center;
+    justify-content: space-around;
     z-index: 100;
 }
 #menu>a:nth-child(1)>div{
     margin-left: 50px;
+}
+#menu>a:last-child>div{
+    margin-right: 40px;
 }
 #feedback{
     text-align: center;
@@ -175,11 +200,11 @@ a{
     grid-template-columns: repeat(3,200px);
     gap: 15px;
     margin-top: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 200px;
     margin-left: 150px;
     text-align: center;
     font-size: 12px;
-    line-height: 10px;
+    /* line-height: 10px; */
 }
 #maincontainer img{
          width: 100%;
@@ -245,3 +270,64 @@ a{
     color: white;
 }
 /* ----------------------------------------------------------------------------- */
+/* ------------------------------------------------------------cart total---------------------------------------------------------- */
+.carttotal{
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    line-height: 10px;
+    text-align: center;
+    border: 0.1px solid black;
+    padding: 10px;
+    background-color: #29B6F6;
+    color: white;
+   
+}
+
+/*  ----------------------------------------pop  up------------------------------------------- */
+.popup{
+    width: 150px;
+    border: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-color:white;
+    border-radius: 6px;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0px 50px 50px;
+    visibility:hidden;
+    transition:0.5s;
+}
+.open-popup{
+    top:50%;
+    transform: translate(-50%,-50%);
+    visibility:visible;
+    z-index: 100;
+}
+
+
+.popup button{
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 0px;
+    font-size: 18px;
+    background-color: #4CAF50;
+}
+.popup img{
+    width: 100%;
+    margin-top: -50%;
+    border-radius: 50%;
+}
+.popup h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 30px 0px 10px;
+    line-height: 0px;
+}
+/* ----------------------------------------------pop complete------------------------------------------------------- */
+

@@ -23,7 +23,7 @@ body{
     /* box-sizing:content-box; */
     display: flex;
     border-bottom: 0.1px solid #E0E0E0;
-    height: 45px;
+    height: 43px;
 }
 #firstimage>div:first-child{
     margin-left: 60px;
@@ -46,16 +46,17 @@ body{
 
 }
 #firstimage>div>img{
-    width: 80%;
+    width: 100%;
     margin: auto;
+    height: 100%;
 }
-/* search section */
+/* -----------------------------------------------------search section ------------------------------------------------------------*/
 
 #search{
-    position: sticky;
+    /* position: sticky; */
     background-color: white;
-    top: 0px;
-    margin: 0;
+     top: 0px; 
+     margin: 0; 
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -63,7 +64,7 @@ body{
     height: 40px;
     margin-top: 5px;
     border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
-    z-index: 100;
+    /* z-index: 100; */
 }
 .signin>div{
     width: 15%;
@@ -73,6 +74,7 @@ body{
 #search img{
     width: 100%;
     height: 100%;
+    
 }
 #search>div:nth-child(1){
     width: 10%;
@@ -107,14 +109,35 @@ body{
     border-radius: 0px 3px 3px 0px;
 }
 .signin{
-    font-size: 10px;
+     font-size: 10px;                           
 }
 .second{
     display: flex;
 }
+
+.rahul{
+    width: 60px;
+    font-size: 10px;
+    position: absolute;
+    line-height: 2px;
+    background-color:white;
+    line-height: 5px;
+    left: 10px;
+    border: 0.1px solid rgb(101, 56, 139);
+top: 30px;
+    visibility: hidden;
+}
+.rahul-change{
+    visibility: visible;
+}
+.rahul p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* <!-- menubar when cursour going then show menu insight menu --> */
 #menu{
-    position: sticky;
+    /* position: sticky; */
     background-color: white;
     top: 40px;
     display: flex;
@@ -122,13 +145,16 @@ body{
     gap: 0px 15px;
     height: 30px;
     border-bottom: 0.1px solid rgba(138, 87, 179, 0.903);
+    justify-content: space-around;
     align-items: center;
-    z-index: 100;
+    /* z-index: 100; */
 }
 #menu>a:nth-child(1)>div{
-    margin-left: 50px;
+    margin-left: 40px;
 }
-
+#menu>a:last-child>div{
+    margin-right: 40px;
+}
 /* end menu */
 #div1{
     height: 30px;

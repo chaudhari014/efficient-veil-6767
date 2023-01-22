@@ -49,10 +49,17 @@
         <button id="searchbutton">Search</button>
     </div>
     <div class="second">
-        <div class="signin">
-            <div> <a href="./login/login page.html" target="_blank" id="signlink" > <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt88337dc20d1d8278/5e178293942caf0fc36b77ab/Header-Icon-PWA-profile.svg" id="signinimage" alt=""></div>
-           <p id="signin"> Sign in</p></a>
-        </div>
+      <div class="signin">
+        <div>  <img  onclick="Rahul()" src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt88337dc20d1d8278/5e178293942caf0fc36b77ab/Header-Icon-PWA-profile.svg" id="signinimage" alt=""></div>
+        <a href="./login/login page.html" id="signlink" ><p id="signin"  > Sign in</p></a>
+        
+    </div>
+    <div id="rahul" class="rahul">
+        <p>Profile</p>
+        <p>My Order</p>
+        <p>My Cart</p>
+        <p onclick="removedata()" class="removed">Log Out</p>
+    </div>
 
         <div class="signin">
             <div> <img src="https://images.contentstack.io/v3/assets/bltdd99f24e8a94d536/blt7888ec93d3d5c1ec/5e17829300c38f0f022d3646/Header-Icon-PWA-bag.svg?height=25&width=44" alt=""></div>
@@ -177,14 +184,24 @@ let signin=document.getElementById("signin")
 let signinimage=document.getElementById("signinimage")
 let signlink=document.getElementById("signlink")
 console.log(signlink)
+let x=document.getElementById("rahul");
+
+ let remove=document.getElementsByClassName("removed");
+ function removedata(){
+    alert("logout successfully")
+    localStorage.removeItem("login")
+    location.reload();
+ }
 
 for(let i=0;i<1;i++){
     for(let j=0;j<data.length;j++){
         if(logindata3[logindata3.length-1].email===data[j].email && logindata3[logindata3.length-1].password===data[j].password){
             signinimage.src=data[j].link;
             signin.innerText=data[j].Firstname+" "+data[j].lastname
-            signlink.href="./homepage.html"
-            
+            signlink.href="#"
+            function Rahul(){
+                x.classList.toggle("rahul-change")
+             }
         }
     }
 }
@@ -243,9 +260,10 @@ let lower=document.getElementById("lower")
 
 ////////// --------------------------------------------search part---------------------------------------------------------------////////////
 let searchbutton=document.getElementById("searchbutton");
-let searchinput=document.getElementById("searchinput");
+
 searchbutton.addEventListener("click",()=>{
-    searchfunction(cartdata)
+  let searchinput=document.getElementById("searchinput");
+    searchfunction(object)
 })
 function searchfunction(data){
 let newfilter=data.filter((el)=>{
@@ -257,7 +275,6 @@ let newfilter=data.filter((el)=>{
   })
   display(newfilter)
 }
-
 // -----------------------------------------------------end serch part--------------------------------------------------------///////////////
   display(object);
 function display(data){
